@@ -3,15 +3,50 @@
 
 * {
   margin: 0;
-  // font-family: Nunito Sans;
-  /* font-family: Nunito Sans; */
+  padding: 0;
 }
 
 
+body {
+  font-family: "Nunito Sans";
+  color: black;
+  background-color: #ffffff;
+}
+
 .primaryFont {
   font-family: "Nunito Sans";
+  font-size: 18px;
+}
+
+.primaryFontBold {
+  @extend .primaryFont;
+  font-weight: 600;
 }
 
 .secondaryFont {
   font-family: 'Montserrat', sans-serif;
+}
+
+.primaryFontColor {
+  color: black !important;
+}
+
+.secondaryFontColor {
+  color: white !important;
+}
+
+.primaryBackgroundColor  {
+  background-color: #ffffff !important;
+}
+
+.outlinePrimary {
+  border: 1px solid white !important;
+}
+
+.outlineSecondary {
+  border: 1px solid black !important;
+}
+
+.secondaryBackgroundColor {
+  background-color: #0288d1  !important;
 }

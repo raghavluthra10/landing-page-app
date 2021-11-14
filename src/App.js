@@ -1,16 +1,9 @@
 import './App.scss';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="primaryFont" >
-        Hii
-      </h1>
-
-      <h1 className="secondaryFont" >
-        Hii
-      </h1>
-    </div>
+    <Navbar />
   );
 }
 
