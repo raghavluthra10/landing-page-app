@@ -1,14 +1,9 @@
 import React from 'react';
 import './Navbar.scss';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Stack } from '@mui/material';
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,49 +15,33 @@ const Navbar = () => {
 
     return (
 
-        <Box sx={{ flexGrow: 1 }}>
+        <nav className='secondaryBackgroundColor px-4 navbar ' >
+            <IconButton className="d-none navbar_menuIcon"  >  
+                <MenuIcon />
+            </IconButton>
 
-                <AppBar className="d-flex " >
+            <div className='flex-grow-1  navbar_pages_container'  >
+                <div className="navbar_pages d-flex justify-content-between "  >
+                    <Link to='/' className="secondaryFontColor" >
+                        Home
+                    </Link>
+                
+                    <Link to='/dashboard' className="secondaryFontColor" >
+                        Dashboard
+                    </Link>
+               
+                    <Link to='/aboutus'  className="secondaryFontColor" >  
+                        About us
+                    </Link>
+                
+                    <Link to='/contactus'  className="secondaryFontColor" >
+                        Contact
+                    </Link>
+                </div>
+            </div>
 
-                    <Toolbar>
-
-                        <IconButton
-                            className="d-none"
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="menu"
-                            sx={{ mr: 2 }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-
-                        <Stack  direction="row" spacing={10}  className="flex-grow-1 align-self-center" >
-                            <Typography variant="subtitle2" component="div" >
-                                Home
-                            </Typography>
-                            <Typography variant="subtitle2" component="div" >
-                                Dashboard
-                            </Typography>
-                            <Typography variant="subtitle2" component="div" >
-                                About us
-                            </Typography>
-                            <Typography variant="subtitle2" component="div" >
-                                Contact us
-                            </Typography>
-                        </Stack>
-                        
-                        
-                        <Button onClick={authenticateUser} 
-                            className="secondaryBackgroundColor outlinePrimary secondaryFontColor" >
-                                Login
-                        </Button>
-
-                    </Toolbar>
-
-                </AppBar>
-            </Box>
-
+            <Button variant='outlined' className="authButton" onClick={authenticateUser} >Login</Button>
+        </nav>
 
     )
 }

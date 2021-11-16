@@ -50,3 +50,12 @@ body {
 .secondaryBackgroundColor {
   background-color: #0288d1  !important;
 }
+
+a, a:visited, a:active, a:hover {
+  text-decoration: none;
+}
+
+.authButton {
+  color: white !important;
+  border: 1px solid white !important;
+}
